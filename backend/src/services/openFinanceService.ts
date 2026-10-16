@@ -1,15 +1,14 @@
-// src/services/openFinanceService.ts
 import { 
   OpenFinanceConsent, 
-  OpenFinanceTransaction, 
-  LocalTransaction 
-} from '../types/transaction.js';
+  OpenFinanceTransaction 
+} from '../types/openFinance.js';
+import { LocalTransaction } from '../types/transaction.js';
 
 export class OpenFinanceService {
   // Simula o pedido de consentimento exigido pelas normas do Banco Central / Open Finance
   public static createConsent(): OpenFinanceConsent {
     return {
-      consentId: `urn:banco-exemplo:consent:${Date.now()}`,
+      consentId: 'urn:banco-exemplo:consent:user-1',
       permissions: [
         'ACCOUNTS_READ',
         'RESOURCES_READ',
@@ -24,7 +23,7 @@ export class OpenFinanceService {
   public static fetchBankTransactions(): OpenFinanceTransaction[] {
     return [
       {
-        transactionId: `of-tx-${Date.now()}-1`,
+        transactionId: 'of-tx-bank-001',
         completedAuthorisedPaymentType: 'TRANSACAO_EFETIVADA',
         creditDebitIndicator: 'CREDITO',
         transactionName: 'Transferência Recebida - Projeto Freelance',
@@ -34,7 +33,7 @@ export class OpenFinanceService {
         transactionDate: new Date().toISOString()
       },
       {
-        transactionId: `of-tx-${Date.now()}-2`,
+        transactionId: 'of-tx-bank-002',
         completedAuthorisedPaymentType: 'TRANSACAO_EFETIVADA',
         creditDebitIndicator: 'DEBITO',
         transactionName: 'Supermercado Central',
@@ -44,7 +43,7 @@ export class OpenFinanceService {
         transactionDate: new Date().toISOString()
       },
       {
-        transactionId: `of-tx-${Date.now()}-3`,
+        transactionId: 'of-tx-bank-003',
         completedAuthorisedPaymentType: 'TRANSACAO_EFETIVADA',
         creditDebitIndicator: 'DEBITO',
         transactionName: 'Assinatura Plataforma de Nuvem',
