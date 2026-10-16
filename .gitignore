@@ -1,0 +1,24 @@
+# Dependências do Node.js (não enviar ao repositório)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ficheiros e pastas de compilação do TypeScript
+dist/
+.dist/
+*.tsbuildinfo
+
+# Ficheiros de configuração de ambiente e variáveis secretas
+.env
+.env.local
+.env.*.local
+
+# Ficheiros temporários de teste local
+nova-transacao.json
+
+# Ficheiros de sistema operativo e do VS Code
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

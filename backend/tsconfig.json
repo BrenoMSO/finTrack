@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Estrutura de Pastas */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Ambiente e Módulos */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    /* Arquivos de Saída e Debug */
+    "sourceMap": true,
+
+    /* Checagem Estrita de Tipos */
+    "strict": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Compatibilidade */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
