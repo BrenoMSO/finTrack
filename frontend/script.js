@@ -217,7 +217,7 @@ btnSyncOpenFinance.addEventListener('click', async () => {
         if (data.addedTransactions > 0) {
             alert(`Sincronização concluída com sucesso! ${data.addedTransactions} transações foram adicionadas.`);
         } else {
-            alert('Extrato bancário já sincronizado. Nenhuma transação duplicada foi adicionada.');
+            alert(data.message || 'Nenhuma nova transação encontrada.');
         }
     } catch (err) {
         console.error('Erro na sincronização Open Finance:', err);
